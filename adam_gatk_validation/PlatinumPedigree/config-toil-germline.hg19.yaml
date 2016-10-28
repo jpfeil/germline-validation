@@ -45,7 +45,7 @@ hapmap:
 omni: 
 
 # Required for VQSR: URL or local path to Mills resource file (Default: None)
-mills: Mills_and_1000G_gold_standard.indels.hg19.sites.vcf
+mills: s3://cgl-pipeline-inputs/germline/hg19/Mills_and_1000G_gold_standard.indels.hg19.sites.vcf
 
 # Required for VQSR: URL or local path to dbSNP resource file (Default: None)
 dbsnp: s3://cgl-pipeline-inputs/germline/hg19/dbsnp_138.hg19.excluding_sites_after_129.vcf
