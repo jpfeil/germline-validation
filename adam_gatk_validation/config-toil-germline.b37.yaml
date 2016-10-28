@@ -24,7 +24,7 @@ output-dir: s3://cgl-driver-projects/germline-validation-input/output/
 sorted: True
 
 # Required: URL or local path to reference genome FASTA file
-genome-fasta: s3://cgl-pipeline-inputs/germline/hg19/ucsc.hg19.fasta
+genome-fasta: s3://cgl-pipeline-inputs/germline/b37/hs37d5.fa
 
 # Optional: URL or local path to reference genome index (Default: None)
 genome-fai:
@@ -33,22 +33,22 @@ genome-fai:
 genome-dict:
 
 # Required for VQSR: URL or local path to 1000G SNP resource file (Default: None)
-g1k_snp: 
+g1k_snp:
 
 # Required for preprocessing: URL or local path to 1000G INDEL resource file (Default: None)
-g1k_indel: s3://cgl-pipeline-inputs/germline/hg19/1000G_phase1.indels.hg19.sites.vcf
+g1k_indel:
 
 # Required for VQSR: URL or local path HapMap resource file (Default: None)
-hapmap: s3://cgl-pipeline-inputs/germline/hg19/hapmap_3.3.hg19.sites.vcf.idx
+hapmap: s3://cgl-pipeline-inputs/germline/b37/hapmap_3.3.b37.vcf
 
 # Required for VQSR: URL or local path Omni resource file (Default: None)
-omni: s3://cgl-pipeline-inputs/germline/hg19/1000G_omni2.5.hg19.sites.vcf
+omni: s3://cgl-pipeline-inputs/germline/b37/1000G_omni2.5.b37.vcf
 
 # Required for VQSR: URL or local path to Mills resource file (Default: None)
-mills: s3://cgl-pipeline-inputs/germline/hg19/Mills_and_1000G_gold_standard.indels.hg19.sites.vcf
+mills: s3://cgl-pipeline-inputs/germline/b37/Mills_and_1000G_gold_standard.indels.b37.vcf
 
 # Required for VQSR: URL or local path to dbSNP resource file (Default: None)
-dbsnp: s3://cgl-pipeline-inputs/germline/hg19/dbsnp_138.hg19.excluding_sites_after_129.vcf
+dbsnp: s3://cgl-pipeline-inputs/germline/b37/dbsnp_138.b37.vcf
 
 # Required for FASTQ samples: Align FASTQs or Realign BAM file (Default: False)
 run-bwa: False
@@ -82,38 +82,27 @@ preprocess-only: False
 
 # Required: GATK annotations used to filter SNPs
 snp-filter-annotations:
- - QualByDepth
- - FisherStrand
- - StrandOddsRatio
- - ReadPosRankSum
- - MappingQualityRankSumTest
- - RMSMappingQuality
 
 # Required: GATK annotations used to filter INDELS
 indel-filter-annotations:
- - QualByDepth
- - FisherStrand
- - StrandOddsRatio
- - ReadPosRankSum
- - MappingQualityRankSumTest
 
 # Required for hard filtering: Name of SNP hard filter for VCF header
-snp_filter_name: GERMLINE_SNP_FILTER
+snp_filter_name:
 
 # Required for hard filtering: SNP JEXL filter expression
-snp_filter_expression: "QD < 2.0 || FS > 60.0 || MQ < 40.0 || MQRankSum < -12.5 || ReadPosRankSum < -8.0"
+snp_filter_expression:
 
 # Required for hard filtering: Name of INDEL hard filter for VCF header
-indel_filter_name: GERMLINE_INDEL_FILTER
+indel_filter_name:
 
 # Required for hard filtering: INDEL JEXL filter expression
-indel_filter_expression: "QD < 2.0 || FS > 200.0 || ReadPosRankSum < -20.0"
+indel_filter_expression:
 
 # Optional: Run GATK VQSR (Default: False)
-run-vqsr: False
+run-vqsr:
 
 # Optional: Merges all samples into a single GVCF for genotyping and filtering (Default: False)
-joint-genotype: 
+joint-genotype:
 
 # Optional: Run Oncotator (Default: False)
 run-oncotator:
@@ -122,7 +111,7 @@ run-oncotator:
 oncotator-db:
 
 # Optional: Suffix added to output filename (i.e. .toil)
-suffix: .toil
+suffix:
 
 # Optional: Path to key file for SSE-C Encryption (Default: None)
 ssec:
