@@ -9,67 +9,67 @@
 # Comments (beginning with #) do not need to be removed. Optional parameters may be left blank.
 ##############################################################################################################
 # Required: Number of cores per job
-cores: 20 
+cores: 10
 
 # Required: Java heap size (human readable bytes format i.e. 10G)
 xmx: 25G
 
 # Required: Approximate input file size (human readable bytes format)
-file-size: 150G
+file-size: 350G
 
 # Required: S3 URL or local path to output directory
-output-dir: s3://cgl-driver-projects/germline-validation-input/output/nov16
+output-dir: s3://cgl-driver-projects/germline-validation-input/output/nov6
 
 # Required: Input BAM file is sorted (Default: False)
 sorted: True
 
 # Required: URL or local path to reference genome FASTA file
-genome-fasta: s3://cgl-pipeline-inputs/germline/hg19/ucsc.hg19.fasta
+genome-fasta: s3://cgl-pipeline-inputs/germline/b37/hs37d5.fa
 
 # Optional: URL or local path to reference genome index (Default: None)
-genome-fai: s3://cgl-pipeline-inputs/germline/hg19/ucsc.hg19.fasta.fai
+genome-fai:
 
 # Optional: URL or local path to reference genome sequence dictionary (Default: None)
-genome-dict: s3://cgl-pipeline-inputs/germline/hg19/ucsc.hg19.fasta.dict
+genome-dict:
 
 # Required for VQSR: URL or local path to 1000G SNP resource file (Default: None)
-g1k_snp: 
+g1k_snp:
 
 # Required for preprocessing: URL or local path to 1000G INDEL resource file (Default: None)
-g1k_indel: s3://cgl-pipeline-inputs/germline/hg19/1000G_phase1.indels.hg19.sites.vcf
+g1k_indel: s3://cgl-pipeline-inputs/germline/b37/1000G_phase1.indels.b37.vcf
 
 # Required for VQSR: URL or local path HapMap resource file (Default: None)
-hapmap:
+hapmap: s3://cgl-pipeline-inputs/germline/b37/hapmap_3.3.b37.vcf
 
 # Required for VQSR: URL or local path Omni resource file (Default: None)
-omni: 
+omni: s3://cgl-pipeline-inputs/germline/b37/1000G_omni2.5.b37.vcf
 
 # Required for VQSR: URL or local path to Mills resource file (Default: None)
-mills: s3://cgl-pipeline-inputs/germline/hg19/Mills_and_1000G_gold_standard.indels.hg19.sites.vcf
+mills: s3://cgl-pipeline-inputs/germline/b37/Mills_and_1000G_gold_standard.indels.b37.vcf
 
 # Required for VQSR: URL or local path to dbSNP resource file (Default: None)
-dbsnp: s3://cgl-pipeline-inputs/germline/hg19/dbsnp_138.hg19.excluding_sites_after_129.vcf
+dbsnp: s3://cgl-pipeline-inputs/germline/b37/dbsnp_138.b37.vcf
 
 # Required for FASTQ samples: Align FASTQs or Realign BAM file (Default: False)
-run-bwa: False 
+run-bwa: False
 
 # Optional. Trim adapters (Default: False)
 trim:
 
 # Required for BWA alignment: URL or local path to BWA index file prefix.amb (Default: None)
-amb: s3://cgl-pipeline-inputs/germline/hg19/bwa_hg19.amb
+amb:
 
 # Required for BWA alignment: URL or local path to BWA index file prefix.ann (Default: None)
-ann: s3://cgl-pipeline-inputs/germline/hg19/bwa_hg19.ann
+ann:
 
 # Required for BWA alignment: URL or local path to BWA index file prefix.bwt (Default: None)
-bwt: s3://cgl-pipeline-inputs/germline/hg19/bwa_hg19.bwt
+bwt:
 
 # Required for BWA alignment: URL or local path to BWA index file prefix.pac (Default: None)
-pac: s3://cgl-pipeline-inputs/germline/hg19/bwa_hg19.pac
+pac:
 
 # Required for BWA alignment: URL or local path to BWA index file prefix.sa (Default: None)
-sa: s3://cgl-pipeline-inputs/germline/hg19/bwa_hg19.sa
+sa:
 
 # Required for ALT-aware alignment: URL or local path to alternate contigs (Default: None)
 alt:
@@ -85,7 +85,7 @@ snp-filter-annotations:
  - QualByDepth
  - FisherStrand
  - StrandOddsRatio
- - ReadPosRankSumTest
+ - ReadPosRankSum
  - MappingQualityRankSumTest
  - RMSMappingQuality
 
@@ -94,7 +94,7 @@ indel-filter-annotations:
  - QualByDepth
  - FisherStrand
  - StrandOddsRatio
- - ReadPosRankSumTest
+ - ReadPosRankSum
  - MappingQualityRankSumTest
 
 # Required for hard filtering: Name of SNP hard filter for VCF header
@@ -113,16 +113,16 @@ indel_filter_expression: "QD < 2.0 || FS > 200.0 || ReadPosRankSum < -20.0"
 run-vqsr: False
 
 # Optional: Merges all samples into a single GVCF for genotyping and filtering (Default: False)
-joint-genotype: False
+joint-genotype: 
 
 # Optional: Run Oncotator (Default: False)
-run-oncotator: False
+run-oncotator:
 
 # Required for Oncotator: URL or local path to Oncotator database (Default: None)
-oncotator-db: None
+oncotator-db:
 
 # Optional: Suffix added to output filename (i.e. .toil)
-suffix: .aws
+suffix: .toil
 
 # Optional: Path to key file for SSE-C Encryption (Default: None)
 ssec:

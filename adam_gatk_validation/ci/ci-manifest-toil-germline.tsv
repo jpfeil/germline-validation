@@ -13,5 +13,4 @@
 #   UUID_FASTQ    file:///path/to/sample.1.fq   file:///path/to/sample.2.fq   @RG	ID:foo	SM:bar
 #
 #   Place your samples below, one per line.
-#ERR194146	s3://cgl-driver-projects/germline-validation-input/PlatinumGenomes/ERR194146_1.fastq	s3://cgl-driver-projects/germline-validation-input/PlatinumGenomes/ERR194146_2.fastq	@RG\tSM:NA12877\tID:ERR194146\tPL:Illumina\tLB:1
-ERR194146	s3://cgl-driver-projects/germline-validation-input/PlatinumGenomes/ERR194146.hg38.sorted.bam
+CI s3://cgl-pipeline-inputs/germline/ci/NIST7035_NIST7086.aln21.ci.1.fq	s3://cgl-pipeline-inputs/germline/ci/NIST7035_NIST7086.aln21.ci.2.fq	@RG\tID:foo\tSM:bar\tPL:ILLUMINA
