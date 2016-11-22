@@ -9,28 +9,28 @@
 # Comments (beginning with #) do not need to be removed. Optional parameters may be left blank.
 ##############################################################################################################
 # Required: Number of cores per job
-cores: 20 
+cores: 32 
 
 # Required: Java heap size (human readable bytes format i.e. 10G)
-xmx: 20G
+xmx: 40G
 
 # Required: Approximate input file size (human readable bytes format)
 file-size: 150G
 
 # Required: S3 URL or local path to output directory
-output-dir: s3://cgl-driver-projects/germline-validation-input/output/nov17
+output-dir: s3://cgl-driver-projects/germline-validation-input/output/nov21
 
 # Required: Input BAM file is sorted (Default: False)
-sorted: True
+sorted: False
 
 # Required: URL or local path to reference genome FASTA file
-genome-fasta: s3://cgl-pipeline-inputs/germline/hg38/Homo_sapiens_assembly38.fasta
+genome-fasta: s3://cgl-pipeline-inputs/germline/hg38/hs38.fa
 
 # Optional: URL or local path to reference genome index (Default: None)
-genome-fai: s3://cgl-pipeline-inputs/germline/hg38/Homo_sapiens_assembly38.fasta.fai
+genome-fai: s3://cgl-pipeline-inputs/germline/hg38/hs38.fa.fai
 
 # Optional: URL or local path to reference genome sequence dictionary (Default: None)
-genome-dict: s3://cgl-pipeline-inputs/germline/hg38/Homo_sapiens_assembly38.dict
+genome-dict: s3://cgl-pipeline-inputs/germline/hg38/hs38.dict
 
 # Required for VQSR: URL or local path to 1000G SNP resource file (Default: None)
 g1k_snp: 
@@ -51,28 +51,28 @@ mills: s3://cgl-pipeline-inputs/germline/hg38/Mills_and_1000G_gold_standard.inde
 dbsnp: s3://cgl-pipeline-inputs/germline/hg38/Homo_sapiens_assembly38.dbsnp138.vcf
 
 # Required for FASTQ samples: Align FASTQs or Realign BAM file (Default: False)
-run-bwa: False
+run-bwa: True
 
 # Optional. Trim adapters (Default: False)
 trim:
 
 # Required for BWA alignment: URL or local path to BWA index file prefix.amb (Default: None)
-amb: s3://cgl-pipeline-inputs/germline/hg38/Homo_sapiens_assembly38.fasta.64.amb
+amb: s3://cgl-pipeline-inputs/germline/hg38/hs38.fa.amb
 
 # Required for BWA alignment: URL or local path to BWA index file prefix.ann (Default: None)
-ann: s3://cgl-pipeline-inputs/germline/hg38/Homo_sapiens_assembly38.fasta.64.ann
+ann: s3://cgl-pipeline-inputs/germline/hg38/hs38.fa.ann
 
 # Required for BWA alignment: URL or local path to BWA index file prefix.bwt (Default: None)
-bwt: s3://cgl-pipeline-inputs/germline/hg38/Homo_sapiens_assembly38.fasta.64.bwt
+bwt: s3://cgl-pipeline-inputs/germline/hg38/hs38.fa.bwt
 
 # Required for BWA alignment: URL or local path to BWA index file prefix.pac (Default: None)
-pac: s3://cgl-pipeline-inputs/germline/hg38/Homo_sapiens_assembly38.fasta.64.pac
+pac: s3://cgl-pipeline-inputs/germline/hg38/hs38.fa.pac
 
 # Required for BWA alignment: URL or local path to BWA index file prefix.sa (Default: None)
-sa: s3://cgl-pipeline-inputs/germline/hg38/Homo_sapiens_assembly38.fasta.64.sa
+sa: s3://cgl-pipeline-inputs/germline/hg38/hs38.fa.sa
 
 # Required for ALT-aware alignment: URL or local path to alternate contigs (Default: None)
-alt: s3://cgl-pipeline-inputs/germline/hg38/Homo_sapiens_assembly38.fasta.64.alt
+alt: 
 
 # Optional: Run GATK Preprocessing (Default: False)
 preprocess: True
