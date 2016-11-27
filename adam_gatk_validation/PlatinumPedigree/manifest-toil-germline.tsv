@@ -10,10 +10,7 @@
 #
 #   UUID_BAM      file:///path/to/sample.bam
 #                           OR
-#   UUID_FASTQ    file:///path/to/sample.1.fq   file:///path/to/sample.2.fq   @RG	ID:foo	SM:bar
+#   UUID_FASTQ    file:///path/to/sample.1.fq   file:///path/to/sample.2.fq   @RG\tID:foo\tSM:bar
 #
 #   Place your samples below, one per line.
-#ERR194146	s3://cgl-driver-projects/germline-validation-input/PlatinumGenomes/ERR194146_1.fastq	s3://cgl-driver-projects/germline-validation-input/PlatinumGenomes/ERR194146_2.fastq	@RG\tSM:NA12877\tID:ERR194146\tPL:Illumina\tLB:1
-#ERR194149	s3://cgl-driver-projects/germline-validation-input/PlatinumGenomes/ERR194149_bwakit_hg38.bam.aln.sorted.bam
-#ERR1954155	s3://cgl-driver-projects/germline-validation-input/PlatinumGenomes/ERR194155_1.fastq.gz	s3://cgl-driver-projects/germline-validation-input/PlatinumGenomes/ERR194155_2.fastq.gz	@RG\tSM:NA12886\tID:ERR194155\tPL:Illumina\tLB:1
-ERR174310	s3://cgl-driver-projects/germline-validation-input/PlatinumGenomes/ERR174310_bwakit_hg38.primary.bam.aln.sorted.properPair.bam
+ERR174310 s3://cgl-driver-projects/germline-validation-input/PlatinumGenomes/ERR174310_1.fastq.gz s3://cgl-driver-projects/germline-validation-input/PlatinumGenomes/ERR174310_2.fastq.gz @RG\tSM:ERR174310\tID:ERR194146\tPL:Illumina\tLB:1
