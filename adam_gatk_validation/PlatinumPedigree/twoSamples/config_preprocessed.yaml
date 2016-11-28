@@ -18,10 +18,10 @@ xmx: 30G
 file-size: 150G
 
 # Required: S3 URL or local path to output directory
-output-dir: s3://cgl-driver-projects/germline-validation-input/output/nov26
+output-dir: s3://cgl-driver-projects/germline-validation-input/output/nov26/twoSamples
 
 # Required: Input BAM file is sorted (Default: False)
-sorted: False
+sorted: True
 
 # Required: URL or local path to reference genome FASTA file
 genome-fasta: s3://cgl-pipeline-inputs/germline/b37/hs37d5.fa
@@ -51,7 +51,7 @@ mills: s3://cgl-pipeline-inputs/germline/b37/Mills_and_1000G_gold_standard.indel
 dbsnp: s3://cgl-pipeline-inputs/germline/b37/dbsnp_138.b37.vcf
 
 # Required for FASTQ samples: Align FASTQs or Realign BAM file (Default: False)
-run-bwa: True
+run-bwa: False
 
 # Optional. Trim adapters (Default: False)
 trim:
@@ -75,10 +75,10 @@ sa: s3://cgl-pipeline-inputs/germline/b37/hs37d5.fa.sa
 alt:
 
 # Optional: Run GATK Preprocessing (Default: False)
-preprocess: True
+preprocess: False
 
 # Optional: Stops after GATK Preprocessing (Default: False)
-preprocess-only: True
+preprocess-only: False 
 
 # Required: GATK annotations used to filter SNPs
 snp-filter-annotations:
@@ -122,7 +122,7 @@ run-oncotator:
 oncotator-db:
 
 # Optional: Suffix added to output filename (i.e. .toil)
-suffix: .prep
+suffix: .twoSample
 
 # Optional: Path to key file for SSE-C Encryption (Default: None)
 ssec:

@@ -18,7 +18,7 @@ xmx: 30G
 file-size: 150G
 
 # Required: S3 URL or local path to output directory
-output-dir: s3://cgl-driver-projects/germline-validation-input/output/nov26
+output-dir: s3://cgl-driver-projects/germline-validation-input/output/nov26/twoSamples
 
 # Required: Input BAM file is sorted (Default: False)
 sorted: False
@@ -78,7 +78,7 @@ alt:
 preprocess: True
 
 # Optional: Stops after GATK Preprocessing (Default: False)
-preprocess-only: True
+preprocess-only: False 
 
 # Required: GATK annotations used to filter SNPs
 snp-filter-annotations:
@@ -122,7 +122,7 @@ run-oncotator:
 oncotator-db:
 
 # Optional: Suffix added to output filename (i.e. .toil)
-suffix: .prep
+suffix: .twoSample
 
 # Optional: Path to key file for SSE-C Encryption (Default: None)
 ssec:
