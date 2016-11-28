@@ -1,0 +1,16 @@
+#   Edit this manifest to include information pertaining to each sample to be run.
+#   There are 2-4 tab-separated columns: UUID, URL, URL2, and Read Group
+#
+#   UUID        Unique sample identifier
+#   URL         URL (http://, ftp://, file://, s3://) pointing to the input FASTQ or BAM file
+#   URL2        (Optional) URL (http://, ftp://, file://, s3://) pointing to paired FASTQ file
+#   RG-line     (Optional) Read group information for FASTQ sample: @RG	ID:foo	SM:bar
+#
+#   Example below. Lines beginning with # are ignored.
+#
+#   UUID_BAM      file:///path/to/sample.bam
+#                           OR
+#   UUID_FASTQ    file:///path/to/sample.1.fq   file:///path/to/sample.2.fq   @RG\tID:foo\tSM:bar
+#
+#   Place your samples below, one per line.
+ERR174310 s3://cgl-driver-projects/germline-validation-input/PlatinumGenomes/ERR174310_1.fastq.gz s3://cgl-driver-projects/germline-validation-input/PlatinumGenomes/ERR174310_2.fastq.gz @RG\tSM:ERR174310\tID:ERR194146\tPL:Illumina\tLB:1
