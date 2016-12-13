@@ -1,0 +1,622 @@
+INFO:toil.lib.bioio:Root logger is at level 'INFO', 'toil' logger at level 'INFO'.
+INFO:toil.lib.bioio:Root logger is at level 'INFO', 'toil' logger at level 'INFO'.
+INFO:toil.common:Using the mesos batch system
+I1213 05:10:57.241245  7721 sched.cpp:164] Version: 0.25.0
+I1213 05:10:57.243643  7735 sched.cpp:262] New master detected at master@172.31.18.247:5050
+I1213 05:10:57.244525  7735 sched.cpp:272] No credentials provided. Attempting to register without authentication
+I1213 05:10:57.246554  7735 sched.cpp:641] Framework registered with ef3452c7-ff96-4926-8068-7644bb7906a5-0001
+INFO:toil.common:Saving user script ModuleDescriptor(dirPath='/home/mesosbox/venv/local/lib/python2.7/site-packages', name='toil_scripts.gatk_germline.germline', fromVirtualEnv=True) as a resource
+INFO:toil.common:Hot-deploying user script resource Resource(name='site-packages', pathHash='6f2429ebad70e5804ec110586a8a33e3', url=u'https://jpfeil-germline-val--files.s3-us-west-2.amazonaws.com/6fafb447-c601-5e25-a78f-e084f214db18?Signature=o4KKE7s0iz8uREnEgDjMp493Za8%3D&Expires=1513141857&AWSAccessKeyId=ASIAJAZ7WQLODKBPZCSQ&versionId=mJ7.0VqVKzRMlt6P4J4p3qO2YxlVFyK4&x-amz-security-token=FQoDYXdzEJr//////////wEaDB1Ay/WP9G5sWHanFyKcA28zaDHJHu91ZIKpKpC3gp7lPPloE6bX6owH%2B2qQMYJoxuntIjhryjUx8Cp%2BiYMo1k45lWCRbgDfVVlRSavnlGsQSZPFkP%2BBWJGer12wwpABdMF3E8nFFJVLWy93osFPoZ9wckWm9pLVh1DyCkCMoqYmJpwaELiJwO6DAFoBlZJYaVv%2BZdwShn9p4lqnp/7KGVEl28pzWW%2BOHJFC%2BkXLomTQNkGm1VXvSwXl1xiPCoqGVaRXqT/ITKbm0SuEpacm%2B6%2BPnG0Nen5EPX3TDXtPG9JS2V6J/4/0qB7kEsSEvfaWwv/8KXdeubrW6uRjyuBr/dT%2BSvepxPoqmsuOYCz4x1xvUR9CkN0Hps6s/PXa5zypCDUbkKQtbtyks/1YF6CPF3KWi397HY4FL%2Bfo33tEkj0tPzfiviE9mz7aicc84QBN9gxYNl3vDhn2G0Y/JZXMYjau%2BQBm7tyK6yPXkIxoG0PTlD0M8tTGGRIb6WBbCB%2Bf4COGBdP6llktw9fwFhyfd4ZAaYqZpnDCY81EXwE8xDvEEp40qnUGuyBe918on5W9wgU%3D', contentHash='a40638d376f1831fd9141ce63c5d8377').
+INFO:toil.common:Written the environment for the jobs to the environment file
+INFO:toil.common:Caching all jobs in job store
+INFO:toil.common:20 jobs downloaded.
+INFO:toil.jobStores.abstractJobStore:Checking job graph connectivity...
+INFO:toil.jobStores.abstractJobStore:20 jobs reachable from root.
+CRITICAL:toil.jobStores.abstractJobStore:Repairing job: 3ed70981-b1ec-4f2e-b64b-fbb8362b60f6
+CRITICAL:toil.jobStores.abstractJobStore:Repairing job: 4ae5e1b4-7e8b-4c1e-8612-d69580be8657
+CRITICAL:toil.jobStores.abstractJobStore:Repairing job: 9c52bba6-86b5-4075-9912-24aa8a895dd5
+CRITICAL:toil.jobStores.abstractJobStore:Repairing job: 2f8e327e-3827-42ae-9f7e-c6446afdb8e8
+INFO:toil.jobStores.abstractJobStore:Discarding old statistics and logs...
+INFO:toil.jobStores.abstractJobStore:Job store is clean
+INFO:toil.common:Running Toil version 3.5.0a1.dev300-46abce61455e3ed92b7f66aa7422d40f20bbd82e.
+INFO:toil.common:Configuration:
+ {'alphaPacking': 0.8,
+ 'badWorker': 0.0,
+ 'badWorkerFailInterval': 0.01,
+ 'batchSystem': 'mesos',
+ 'betaInertia': 1.2,
+ 'clean': 'onSuccess',
+ 'cleanWorkDir': 'always',
+ 'cseKey': None,
+ 'deadlockWait': 60,
+ 'defaultCores': 1,
+ 'defaultDisk': 2147483648,
+ 'defaultMemory': 2147483648,
+ 'defaultPreemptable': False,
+ 'disableCaching': False,
+ 'environment': {},
+ 'jobStore': 'aws:us-west-2:jpfeil-germline-val',
+ 'logLevel': 'INFO',
+ 'maxCores': 9223372036854775807,
+ 'maxDisk': 9223372036854775807,
+ 'maxJobDuration': 9223372036854775807,
+ 'maxLogFileSize': 50120,
+ 'maxMemory': 9223372036854775807,
+ 'maxNodes': 10,
+ 'maxPreemptableNodes': 0,
+ 'maxPreemptableServiceJobs': 9223372036854775807,
+ 'maxServiceJobs': 9223372036854775807,
+ 'mesosMasterAddress': 'mesos-master:5050',
+ 'minNodes': 0,
+ 'minPreemptableNodes': 0,
+ 'nodeOptions': None,
+ 'nodeType': None,
+ 'parasolCommand': 'parasol',
+ 'parasolMaxBatches': 10000,
+ 'preemptableCompensation': 0.0,
+ 'preemptableNodeOptions': None,
+ 'preemptableNodeType': None,
+ 'provisioner': None,
+ 'readGlobalFileMutableByDefault': False,
+ 'rescueJobsFrequency': 3600,
+ 'restart': True,
+ 'retryCount': 2,
+ 'scale': 1,
+ 'scaleInterval': 10,
+ 'servicePollingInterval': 60,
+ 'sseKey': None,
+ 'stats': False,
+ 'useAsync': True,
+ 'workDir': '/var/lib/toil',
+ 'workflowAttemptNumber': 1,
+ 'workflowID': 'feb2500d-7c10-41f0-9b40-2be47a9c86ef'}
+INFO:toil.realtimeLogger:Real-time logging disabled
+INFO:toil.toilState:(Re)building internal scheduler state
+INFO:toil.leader:Found 1 jobs to start and 5 jobs with successors to run
+INFO:toil.leader:Checked batch system has no running jobs and no updated jobs
+INFO:toil.leader:Starting the main loop
+WARNING:toil.batchSystems.mesos.batchSystem:Slave not marked as either preemptable or not. Assuming non-preemptable.
+WARNING:toil.batchSystems.mesos.batchSystem:Slave not marked as either preemptable or not. Assuming non-preemptable.
+WARNING:toil.batchSystems.mesos.batchSystem:Slave not marked as either preemptable or not. Assuming non-preemptable.
+WARNING:toil.batchSystems.mesos.batchSystem:Slave not marked as either preemptable or not. Assuming non-preemptable.
+WARNING:toil.batchSystems.mesos.batchSystem:Slave not marked as either preemptable or not. Assuming non-preemptable.
+WARNING:toil.batchSystems.mesos.batchSystem:Slave not marked as either preemptable or not. Assuming non-preemptable.
+WARNING:toil.batchSystems.mesos.batchSystem:Slave not marked as either preemptable or not. Assuming non-preemptable.
+WARNING:toil.batchSystems.mesos.batchSystem:Slave not marked as either preemptable or not. Assuming non-preemptable.
+WARNING:toil.leader:The job seems to have left a log file, indicating failure: 'gatk_haplotype_caller' 3ed70981-b1ec-4f2e-b64b-fbb8362b60f6
+---TOIL WORKER OUTPUT LOG---
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6    Running Toil version 3.5.0a1.dev300-46abce61455e3ed92b7f66aa7422d40f20bbd82e.
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6    INFO:toil.worker:Running Toil version 3.5.0a1.dev300-46abce61455e3ed92b7f66aa7422d40f20bbd82e.
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6    Configuration:
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     {'alphaPacking': 0.8,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'badWorker': 0.0,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'badWorkerFailInterval': 0.01,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'batchSystem': 'mesos',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'betaInertia': 1.2,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'clean': 'onSuccess',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'cleanWorkDir': 'always',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'cseKey': None,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'deadlockWait': 60,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'defaultCores': 1,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'defaultDisk': 2147483648,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'defaultMemory': 2147483648,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'defaultPreemptable': False,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'disableCaching': False,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'environment': {},
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'jobStore': 'aws:us-west-2:jpfeil-germline-val',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'logLevel': 'INFO',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxCores': 9223372036854775807,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxDisk': 9223372036854775807,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxJobDuration': 9223372036854775807,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxLogFileSize': 50120,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxMemory': 9223372036854775807,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxNodes': 10,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxPreemptableNodes': 0,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxPreemptableServiceJobs': 9223372036854775807,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxServiceJobs': 9223372036854775807,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'mesosMasterAddress': 'mesos-master:5050',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'minNodes': 0,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'minPreemptableNodes': 0,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'nodeOptions': None,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'nodeType': None,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'parasolCommand': 'parasol',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'parasolMaxBatches': 10000,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'preemptableCompensation': 0.0,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'preemptableNodeOptions': None,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'preemptableNodeType': None,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'provisioner': None,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'readGlobalFileMutableByDefault': False,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'rescueJobsFrequency': 3600,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'restart': True,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'retryCount': 2,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'scale': 1,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'scaleInterval': 10,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'servicePollingInterval': 60,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'sseKey': None,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'stats': False,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'useAsync': True,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'workDir': '/var/lib/toil',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'workflowAttemptNumber': 1,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'workflowID': 'feb2500d-7c10-41f0-9b40-2be47a9c86ef'}
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6    INFO:toil.worker:Configuration:
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     {'alphaPacking': 0.8,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'badWorker': 0.0,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'badWorkerFailInterval': 0.01,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'batchSystem': 'mesos',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'betaInertia': 1.2,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'clean': 'onSuccess',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'cleanWorkDir': 'always',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'cseKey': None,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'deadlockWait': 60,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'defaultCores': 1,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'defaultDisk': 2147483648,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'defaultMemory': 2147483648,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'defaultPreemptable': False,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'disableCaching': False,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'environment': {},
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'jobStore': 'aws:us-west-2:jpfeil-germline-val',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'logLevel': 'INFO',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxCores': 9223372036854775807,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxDisk': 9223372036854775807,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxJobDuration': 9223372036854775807,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxLogFileSize': 50120,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxMemory': 9223372036854775807,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxNodes': 10,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxPreemptableNodes': 0,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxPreemptableServiceJobs': 9223372036854775807,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxServiceJobs': 9223372036854775807,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'mesosMasterAddress': 'mesos-master:5050',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'minNodes': 0,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'minPreemptableNodes': 0,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'nodeOptions': None,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'nodeType': None,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'parasolCommand': 'parasol',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'parasolMaxBatches': 10000,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'preemptableCompensation': 0.0,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'preemptableNodeOptions': None,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'preemptableNodeType': None,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'provisioner': None,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'readGlobalFileMutableByDefault': False,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'rescueJobsFrequency': 3600,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'restart': True,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'retryCount': 2,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'scale': 1,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'scaleInterval': 10,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'servicePollingInterval': 60,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'sseKey': None,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'stats': False,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'useAsync': True,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'workDir': '/var/lib/toil',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'workflowAttemptNumber': 1,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'workflowID': 'feb2500d-7c10-41f0-9b40-2be47a9c86ef'}
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6    INFO:toil.fileStore:Starting job (5f6cfeb2-4e74-46da-80c6-811eec6b59ae) with ID (3fcfa3a560128c6296028c051406d1a942bd37d0).
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6    CRITICAL:toil.fileStore:CACHE: Unable to acquire lock on /var/lib/toil/toil-feb2500d-7c10-41f0-9b40-2be47a9c86ef/cache-feb2500d-7c10-41f0-9b40-2be47a9c86ef/.cacheLock
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6    Traceback (most recent call last):
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6      File "/usr/local/lib/python2.7/dist-packages/toil/worker.py", line 331, in main
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6        caching=not config.disableCaching)
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6      File "/usr/local/lib/python2.7/dist-packages/toil/fileStore.py", line 116, in createFileStore
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6        return fileStoreCls(jobStore, jobGraph, localTempDir, inputBlockFn)
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6      File "/usr/local/lib/python2.7/dist-packages/toil/fileStore.py", line 458, in __init__
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6        self._setupCache()
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6      File "/usr/local/lib/python2.7/dist-packages/toil/fileStore.py", line 872, in _setupCache
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6        with self._CacheState.open(self) as cacheInfo:
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6      File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6        return self.gen.next()
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6      File "/usr/local/lib/python2.7/dist-packages/toil/fileStore.py", line 1221, in open
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6        cacheInfo = cls._load(outer.cacheStateFile)
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6      File "/usr/local/lib/python2.7/dist-packages/toil/fileStore.py", line 297, in _load
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6        with open(fileName, 'r') as fH:
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6    IOError: [Errno 2] No such file or directory: '/var/lib/toil/toil-feb2500d-7c10-41f0-9b40-2be47a9c86ef/cache-feb2500d-7c10-41f0-9b40-2be47a9c86ef/_cacheState'
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6    Exiting the worker because of a failed job on host ip-172-31-32-19
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6    ERROR:toil.worker:Exiting the worker because of a failed job on host ip-172-31-32-19
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6    WARNING:toil.jobGraph:Due to failure we are reducing the remaining retry count of job 'gatk_haplotype_caller' 3ed70981-b1ec-4f2e-b64b-fbb8362b60f6 with ID 3ed70981-b1ec-4f2e-b64b-fbb8362b60f6 to 2
+WARNING:toil.batchSystems.mesos.batchSystem:Slave not marked as either preemptable or not. Assuming non-preemptable.
+WARNING:toil.leader:The job seems to have left a log file, indicating failure: 'gatk_haplotype_caller' 3ed70981-b1ec-4f2e-b64b-fbb8362b60f6
+---TOIL WORKER OUTPUT LOG---
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6    Running Toil version 3.5.0a1.dev300-46abce61455e3ed92b7f66aa7422d40f20bbd82e.
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6    INFO:toil.worker:Running Toil version 3.5.0a1.dev300-46abce61455e3ed92b7f66aa7422d40f20bbd82e.
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6    Configuration:
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     {'alphaPacking': 0.8,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'badWorker': 0.0,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'badWorkerFailInterval': 0.01,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'batchSystem': 'mesos',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'betaInertia': 1.2,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'clean': 'onSuccess',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'cleanWorkDir': 'always',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'cseKey': None,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'deadlockWait': 60,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'defaultCores': 1,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'defaultDisk': 2147483648,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'defaultMemory': 2147483648,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'defaultPreemptable': False,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'disableCaching': False,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'environment': {},
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'jobStore': 'aws:us-west-2:jpfeil-germline-val',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'logLevel': 'INFO',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxCores': 9223372036854775807,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxDisk': 9223372036854775807,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxJobDuration': 9223372036854775807,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxLogFileSize': 50120,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxMemory': 9223372036854775807,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxNodes': 10,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxPreemptableNodes': 0,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxPreemptableServiceJobs': 9223372036854775807,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxServiceJobs': 9223372036854775807,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'mesosMasterAddress': 'mesos-master:5050',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'minNodes': 0,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'minPreemptableNodes': 0,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'nodeOptions': None,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'nodeType': None,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'parasolCommand': 'parasol',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'parasolMaxBatches': 10000,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'preemptableCompensation': 0.0,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'preemptableNodeOptions': None,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'preemptableNodeType': None,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'provisioner': None,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'readGlobalFileMutableByDefault': False,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'rescueJobsFrequency': 3600,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'restart': True,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'retryCount': 2,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'scale': 1,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'scaleInterval': 10,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'servicePollingInterval': 60,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'sseKey': None,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'stats': False,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'useAsync': True,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'workDir': '/var/lib/toil',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'workflowAttemptNumber': 1,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'workflowID': 'feb2500d-7c10-41f0-9b40-2be47a9c86ef'}
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6    INFO:toil.worker:Configuration:
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     {'alphaPacking': 0.8,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'badWorker': 0.0,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'badWorkerFailInterval': 0.01,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'batchSystem': 'mesos',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'betaInertia': 1.2,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'clean': 'onSuccess',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'cleanWorkDir': 'always',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'cseKey': None,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'deadlockWait': 60,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'defaultCores': 1,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'defaultDisk': 2147483648,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'defaultMemory': 2147483648,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'defaultPreemptable': False,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'disableCaching': False,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'environment': {},
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'jobStore': 'aws:us-west-2:jpfeil-germline-val',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'logLevel': 'INFO',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxCores': 9223372036854775807,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxDisk': 9223372036854775807,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxJobDuration': 9223372036854775807,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxLogFileSize': 50120,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxMemory': 9223372036854775807,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxNodes': 10,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxPreemptableNodes': 0,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxPreemptableServiceJobs': 9223372036854775807,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxServiceJobs': 9223372036854775807,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'mesosMasterAddress': 'mesos-master:5050',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'minNodes': 0,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'minPreemptableNodes': 0,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'nodeOptions': None,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'nodeType': None,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'parasolCommand': 'parasol',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'parasolMaxBatches': 10000,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'preemptableCompensation': 0.0,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'preemptableNodeOptions': None,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'preemptableNodeType': None,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'provisioner': None,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'readGlobalFileMutableByDefault': False,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'rescueJobsFrequency': 3600,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'restart': True,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'retryCount': 2,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'scale': 1,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'scaleInterval': 10,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'servicePollingInterval': 60,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'sseKey': None,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'stats': False,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'useAsync': True,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'workDir': '/var/lib/toil',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'workflowAttemptNumber': 1,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'workflowID': 'feb2500d-7c10-41f0-9b40-2be47a9c86ef'}
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6    INFO:toil.fileStore:Starting job (5f6cfeb2-4e74-46da-80c6-811eec6b59ae) with ID (3fcfa3a560128c6296028c051406d1a942bd37d0).
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6    CRITICAL:toil.fileStore:CACHE: Unable to acquire lock on /var/lib/toil/toil-feb2500d-7c10-41f0-9b40-2be47a9c86ef/cache-feb2500d-7c10-41f0-9b40-2be47a9c86ef/.cacheLock
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6    Traceback (most recent call last):
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6      File "/usr/local/lib/python2.7/dist-packages/toil/worker.py", line 331, in main
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6        caching=not config.disableCaching)
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6      File "/usr/local/lib/python2.7/dist-packages/toil/fileStore.py", line 116, in createFileStore
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6        return fileStoreCls(jobStore, jobGraph, localTempDir, inputBlockFn)
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6      File "/usr/local/lib/python2.7/dist-packages/toil/fileStore.py", line 458, in __init__
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6        self._setupCache()
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6      File "/usr/local/lib/python2.7/dist-packages/toil/fileStore.py", line 872, in _setupCache
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6        with self._CacheState.open(self) as cacheInfo:
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6      File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6        return self.gen.next()
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6      File "/usr/local/lib/python2.7/dist-packages/toil/fileStore.py", line 1221, in open
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6        cacheInfo = cls._load(outer.cacheStateFile)
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6      File "/usr/local/lib/python2.7/dist-packages/toil/fileStore.py", line 297, in _load
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6        with open(fileName, 'r') as fH:
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6    IOError: [Errno 2] No such file or directory: '/var/lib/toil/toil-feb2500d-7c10-41f0-9b40-2be47a9c86ef/cache-feb2500d-7c10-41f0-9b40-2be47a9c86ef/_cacheState'
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6    Exiting the worker because of a failed job on host ip-172-31-32-19
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6    ERROR:toil.worker:Exiting the worker because of a failed job on host ip-172-31-32-19
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6    WARNING:toil.jobGraph:Due to failure we are reducing the remaining retry count of job 'gatk_haplotype_caller' 3ed70981-b1ec-4f2e-b64b-fbb8362b60f6 with ID 3ed70981-b1ec-4f2e-b64b-fbb8362b60f6 to 1
+WARNING:toil.batchSystems.mesos.batchSystem:Slave not marked as either preemptable or not. Assuming non-preemptable.
+WARNING:toil.leader:The job seems to have left a log file, indicating failure: 'gatk_haplotype_caller' 3ed70981-b1ec-4f2e-b64b-fbb8362b60f6
+---TOIL WORKER OUTPUT LOG---
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6    Running Toil version 3.5.0a1.dev300-46abce61455e3ed92b7f66aa7422d40f20bbd82e.
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6    INFO:toil.worker:Running Toil version 3.5.0a1.dev300-46abce61455e3ed92b7f66aa7422d40f20bbd82e.
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6    Configuration:
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     {'alphaPacking': 0.8,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'badWorker': 0.0,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'badWorkerFailInterval': 0.01,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'batchSystem': 'mesos',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'betaInertia': 1.2,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'clean': 'onSuccess',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'cleanWorkDir': 'always',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'cseKey': None,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'deadlockWait': 60,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'defaultCores': 1,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'defaultDisk': 2147483648,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'defaultMemory': 2147483648,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'defaultPreemptable': False,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'disableCaching': False,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'environment': {},
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'jobStore': 'aws:us-west-2:jpfeil-germline-val',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'logLevel': 'INFO',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxCores': 9223372036854775807,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxDisk': 9223372036854775807,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxJobDuration': 9223372036854775807,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxLogFileSize': 50120,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxMemory': 9223372036854775807,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxNodes': 10,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxPreemptableNodes': 0,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxPreemptableServiceJobs': 9223372036854775807,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxServiceJobs': 9223372036854775807,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'mesosMasterAddress': 'mesos-master:5050',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'minNodes': 0,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'minPreemptableNodes': 0,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'nodeOptions': None,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'nodeType': None,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'parasolCommand': 'parasol',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'parasolMaxBatches': 10000,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'preemptableCompensation': 0.0,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'preemptableNodeOptions': None,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'preemptableNodeType': None,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'provisioner': None,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'readGlobalFileMutableByDefault': False,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'rescueJobsFrequency': 3600,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'restart': True,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'retryCount': 2,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'scale': 1,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'scaleInterval': 10,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'servicePollingInterval': 60,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'sseKey': None,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'stats': False,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'useAsync': True,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'workDir': '/var/lib/toil',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'workflowAttemptNumber': 1,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'workflowID': 'feb2500d-7c10-41f0-9b40-2be47a9c86ef'}
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6    INFO:toil.worker:Configuration:
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     {'alphaPacking': 0.8,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'badWorker': 0.0,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'badWorkerFailInterval': 0.01,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'batchSystem': 'mesos',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'betaInertia': 1.2,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'clean': 'onSuccess',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'cleanWorkDir': 'always',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'cseKey': None,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'deadlockWait': 60,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'defaultCores': 1,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'defaultDisk': 2147483648,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'defaultMemory': 2147483648,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'defaultPreemptable': False,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'disableCaching': False,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'environment': {},
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'jobStore': 'aws:us-west-2:jpfeil-germline-val',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'logLevel': 'INFO',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxCores': 9223372036854775807,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxDisk': 9223372036854775807,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxJobDuration': 9223372036854775807,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxLogFileSize': 50120,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxMemory': 9223372036854775807,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxNodes': 10,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxPreemptableNodes': 0,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxPreemptableServiceJobs': 9223372036854775807,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'maxServiceJobs': 9223372036854775807,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'mesosMasterAddress': 'mesos-master:5050',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'minNodes': 0,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'minPreemptableNodes': 0,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'nodeOptions': None,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'nodeType': None,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'parasolCommand': 'parasol',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'parasolMaxBatches': 10000,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'preemptableCompensation': 0.0,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'preemptableNodeOptions': None,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'preemptableNodeType': None,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'provisioner': None,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'readGlobalFileMutableByDefault': False,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'rescueJobsFrequency': 3600,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'restart': True,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'retryCount': 2,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'scale': 1,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'scaleInterval': 10,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'servicePollingInterval': 60,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'sseKey': None,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'stats': False,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'useAsync': True,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'workDir': '/var/lib/toil',
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'workflowAttemptNumber': 1,
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6     'workflowID': 'feb2500d-7c10-41f0-9b40-2be47a9c86ef'}
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6    INFO:toil.fileStore:Starting job (5f6cfeb2-4e74-46da-80c6-811eec6b59ae) with ID (3fcfa3a560128c6296028c051406d1a942bd37d0).
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6    CRITICAL:toil.fileStore:CACHE: Unable to acquire lock on /var/lib/toil/toil-feb2500d-7c10-41f0-9b40-2be47a9c86ef/cache-feb2500d-7c10-41f0-9b40-2be47a9c86ef/.cacheLock
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6    Traceback (most recent call last):
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6      File "/usr/local/lib/python2.7/dist-packages/toil/worker.py", line 331, in main
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6        caching=not config.disableCaching)
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6      File "/usr/local/lib/python2.7/dist-packages/toil/fileStore.py", line 116, in createFileStore
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6        return fileStoreCls(jobStore, jobGraph, localTempDir, inputBlockFn)
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6      File "/usr/local/lib/python2.7/dist-packages/toil/fileStore.py", line 458, in __init__
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6        self._setupCache()
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6      File "/usr/local/lib/python2.7/dist-packages/toil/fileStore.py", line 872, in _setupCache
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6        with self._CacheState.open(self) as cacheInfo:
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6      File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6        return self.gen.next()
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6      File "/usr/local/lib/python2.7/dist-packages/toil/fileStore.py", line 1221, in open
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6        cacheInfo = cls._load(outer.cacheStateFile)
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6      File "/usr/local/lib/python2.7/dist-packages/toil/fileStore.py", line 297, in _load
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6        with open(fileName, 'r') as fH:
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6    IOError: [Errno 2] No such file or directory: '/var/lib/toil/toil-feb2500d-7c10-41f0-9b40-2be47a9c86ef/cache-feb2500d-7c10-41f0-9b40-2be47a9c86ef/_cacheState'
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6    Exiting the worker because of a failed job on host ip-172-31-32-19
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6    ERROR:toil.worker:Exiting the worker because of a failed job on host ip-172-31-32-19
+3ed70981-b1ec-4f2e-b64b-fbb8362b60f6    WARNING:toil.jobGraph:Due to failure we are reducing the remaining retry count of job 'gatk_haplotype_caller' 3ed70981-b1ec-4f2e-b64b-fbb8362b60f6 with ID 3ed70981-b1ec-4f2e-b64b-fbb8362b60f6 to 0
+WARNING:toil.leader:Job 'gatk_haplotype_caller' 3ed70981-b1ec-4f2e-b64b-fbb8362b60f6 with ID 3ed70981-b1ec-4f2e-b64b-fbb8362b60f6 is completely failed
+INFO:toil.leader:No jobs left to run so exiting.
+INFO:toil.leader:Finished the main loop
+INFO:toil.serviceManager:Waiting for service manager thread to finish ...
+INFO:toil.serviceManager:... finished shutting down the service manager. Took 0.129092931747 seconds
+INFO:toil.statsAndLogging:Waiting for stats and logging collator thread to finish ...
+INFO:toil.statsAndLogging:... finished collating stats and logs. Took 0.309038877487 seconds
+INFO:toil.leader:Finished toil run with 6 failed jobs
+INFO:toil.leader:Failed jobs at end of the run: [JobNode( **{'jobStoreID': '4ae5e1b4-7e8b-4c1e-8612-d69580be8657', '_config': None, 'predecessorNumber': 0, 'unitName': None, '_preemptable': False, 'jobName': 'run_gatk_germline_pipeline', '_disk': 2147483648, '_cores': 1, 'command': None, '_memory': 2147483648} ), JobNode( **{'jobStoreID': '3ed70981-b1ec-4f2e-b64b-fbb8362b60f6', '_config': None, 'predecessorNumber': 1, 'unitName': None, '_preemptable': False, 'jobName': 'gatk_haplotype_caller', '_disk': 136566164060, '_cores': 30, 'command': '_toil 5f6cfeb2-4e74-46da-80c6-811eec6b59ae /home/mesosbox/venv/local/lib/python2.7/site-packages toil_scripts.gatk_germline.germline True', '_memory': 32212254720} ), JobNode( **{'jobStoreID': 'a9c1bbd4-6e10-47cb-b98e-7756feb36e75', '_config': None, 'predecessorNumber': 1, 'unitName': None, '_preemptable': False, 'jobName': 'Job', '_disk': 1048576, '_cores': 0.1, 'command': None, '_memory': 33554432} ), JobNode( **{'jobStoreID': '9c52bba6-86b5-4075-9912-24aa8a895dd5', '_config': None, 'predecessorNumber': 1, 'unitName': None, '_preemptable': False, 'jobName': 'prepare_bam', '_disk': 2147483648, '_cores': 1, 'command': None, '_memory': 2147483648} ), JobNode( **{'jobStoreID': '18aeca40-b804-4d48-aa87-114c84c74c81', '_config': None, 'predecessorNumber': 1, 'unitName': None, '_preemptable': False, 'jobName': 'EncapsulatedJob', '_disk': 1048576, '_cores': 0.1, 'command': None, '_memory': 33554432} ), JobNode( **{'jobStoreID': '2f8e327e-3827-42ae-9f7e-c6446afdb8e8', '_config': None, 'predecessorNumber': 1, 'unitName': None, '_preemptable': False, 'jobName': 'EncapsulatedJob', '_disk': 2147483648, '_cores': 1, 'command': None, '_memory': 2147483648} )]
+I1213 05:11:27.616722  7721 sched.cpp:1771] Asked to stop the driver
+I1213 05:11:27.617069  7734 sched.cpp:1040] Stopping framework 'ef3452c7-ff96-4926-8068-7644bb7906a5-0001'
+Traceback (most recent call last):
+  File "/home/mesosbox/venv/bin/toil-germline", line 11, in <module>
+    sys.exit(main())
+  File "/home/mesosbox/venv/local/lib/python2.7/site-packages/toil_scripts/gatk_germline/germline.py", line 895, in main
+    Job.Runner.startToil(root, options)
+  File "/usr/local/lib/python2.7/dist-packages/toil/job.py", line 740, in startToil
+    return toil.restart()
+  File "/usr/local/lib/python2.7/dist-packages/toil/common.py", line 669, in restart
+    return self._runMainLoop(rootJobGraph)
+  File "/usr/local/lib/python2.7/dist-packages/toil/common.py", line 926, in _runMainLoop
+    jobCache=self._jobCache).run()
+  File "/usr/local/lib/python2.7/dist-packages/toil/leader.py", line 192, in run
+    raise FailedJobsException(self.config.jobStore, self.toilState.totalFailedJobs, self.jobStore)
+toil.leader.FailedJobsException: The job store 'aws:us-west-2:jpfeil-germline-val' contains 6 failed jobs: 'run_gatk_germline_pipeline' 4ae5e1b4-7e8b-4c1e-8612-d69580be8657, 'gatk_haplotype_caller' 3ed70981-b1ec-4f2e-b64b-fbb8362b60f6, 'Job' a9c1bbd4-6e10-47cb-b98e-7756feb36e75, 'prepare_bam' 9c52bba6-86b5-4075-9912-24aa8a895dd5, 'EncapsulatedJob' 18aeca40-b804-4d48-aa87-114c84c74c81, 'EncapsulatedJob' 2f8e327e-3827-42ae-9f7e-c6446afdb8e8
+=========> Failed job 'gatk_haplotype_caller' 3ed70981-b1ec-4f2e-b64b-fbb8362b60f6 3ed70981-b1ec-4f2e-b64b-fbb8362b60f6
+---TOIL WORKER OUTPUT LOG---
+Running Toil version 3.5.0a1.dev300-46abce61455e3ed92b7f66aa7422d40f20bbd82e.
+INFO:toil.worker:Running Toil version 3.5.0a1.dev300-46abce61455e3ed92b7f66aa7422d40f20bbd82e.
+Configuration:
+ {'alphaPacking': 0.8,
+ 'badWorker': 0.0,
+ 'badWorkerFailInterval': 0.01,
+ 'batchSystem': 'mesos',
+ 'betaInertia': 1.2,
+ 'clean': 'onSuccess',
+ 'cleanWorkDir': 'always',
+ 'cseKey': None,
+ 'deadlockWait': 60,
+ 'defaultCores': 1,
+ 'defaultDisk': 2147483648,
+ 'defaultMemory': 2147483648,
+ 'defaultPreemptable': False,
+ 'disableCaching': False,
+ 'environment': {},
+ 'jobStore': 'aws:us-west-2:jpfeil-germline-val',
+ 'logLevel': 'INFO',
+ 'maxCores': 9223372036854775807,
+ 'maxDisk': 9223372036854775807,
+ 'maxJobDuration': 9223372036854775807,
+ 'maxLogFileSize': 50120,
+ 'maxMemory': 9223372036854775807,
+ 'maxNodes': 10,
+ 'maxPreemptableNodes': 0,
+ 'maxPreemptableServiceJobs': 9223372036854775807,
+ 'maxServiceJobs': 9223372036854775807,
+ 'mesosMasterAddress': 'mesos-master:5050',
+ 'minNodes': 0,
+ 'minPreemptableNodes': 0,
+ 'nodeOptions': None,
+ 'nodeType': None,
+ 'parasolCommand': 'parasol',
+ 'parasolMaxBatches': 10000,
+ 'preemptableCompensation': 0.0,
+ 'preemptableNodeOptions': None,
+ 'preemptableNodeType': None,
+ 'provisioner': None,
+ 'readGlobalFileMutableByDefault': False,
+ 'rescueJobsFrequency': 3600,
+ 'restart': True,
+ 'retryCount': 2,
+ 'scale': 1,
+ 'scaleInterval': 10,
+ 'servicePollingInterval': 60,
+ 'sseKey': None,
+ 'stats': False,
+ 'useAsync': True,
+ 'workDir': '/var/lib/toil',
+ 'workflowAttemptNumber': 1,
+ 'workflowID': 'feb2500d-7c10-41f0-9b40-2be47a9c86ef'}
+INFO:toil.worker:Configuration:
+ {'alphaPacking': 0.8,
+ 'badWorker': 0.0,
+ 'badWorkerFailInterval': 0.01,
+ 'batchSystem': 'mesos',
+ 'betaInertia': 1.2,
+ 'clean': 'onSuccess',
+ 'cleanWorkDir': 'always',
+ 'cseKey': None,
+ 'deadlockWait': 60,
+ 'defaultCores': 1,
+ 'defaultDisk': 2147483648,
+ 'defaultMemory': 2147483648,
+ 'defaultPreemptable': False,
+ 'disableCaching': False,
+ 'environment': {},
+ 'jobStore': 'aws:us-west-2:jpfeil-germline-val',
+ 'logLevel': 'INFO',
+ 'maxCores': 9223372036854775807,
+ 'maxDisk': 9223372036854775807,
+ 'maxJobDuration': 9223372036854775807,
+ 'maxLogFileSize': 50120,
+ 'maxMemory': 9223372036854775807,
+ 'maxNodes': 10,
+ 'maxPreemptableNodes': 0,
+ 'maxPreemptableServiceJobs': 9223372036854775807,
+ 'maxServiceJobs': 9223372036854775807,
+ 'mesosMasterAddress': 'mesos-master:5050',
+ 'minNodes': 0,
+ 'minPreemptableNodes': 0,
+ 'nodeOptions': None,
+ 'nodeType': None,
+ 'parasolCommand': 'parasol',
+ 'parasolMaxBatches': 10000,
+ 'preemptableCompensation': 0.0,
+ 'preemptableNodeOptions': None,
+ 'preemptableNodeType': None,
+ 'provisioner': None,
+ 'readGlobalFileMutableByDefault': False,
+ 'rescueJobsFrequency': 3600,
+ 'restart': True,
+ 'retryCount': 2,
+ 'scale': 1,
+ 'scaleInterval': 10,
+ 'servicePollingInterval': 60,
+ 'sseKey': None,
+ 'stats': False,
+ 'useAsync': True,
+ 'workDir': '/var/lib/toil',
+ 'workflowAttemptNumber': 1,
+ 'workflowID': 'feb2500d-7c10-41f0-9b40-2be47a9c86ef'}
+INFO:toil.fileStore:Starting job (5f6cfeb2-4e74-46da-80c6-811eec6b59ae) with ID (3fcfa3a560128c6296028c051406d1a942bd37d0).
+CRITICAL:toil.fileStore:CACHE: Unable to acquire lock on /var/lib/toil/toil-feb2500d-7c10-41f0-9b40-2be47a9c86ef/cache-feb2500d-7c10-41f0-9b40-2be47a9c86ef/.cacheLock
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/toil/worker.py", line 331, in main
+    caching=not config.disableCaching)
+  File "/usr/local/lib/python2.7/dist-packages/toil/fileStore.py", line 116, in createFileStore
+    return fileStoreCls(jobStore, jobGraph, localTempDir, inputBlockFn)
+  File "/usr/local/lib/python2.7/dist-packages/toil/fileStore.py", line 458, in __init__
+    self._setupCache()
+  File "/usr/local/lib/python2.7/dist-packages/toil/fileStore.py", line 872, in _setupCache
+    with self._CacheState.open(self) as cacheInfo:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/toil/fileStore.py", line 1221, in open
+    cacheInfo = cls._load(outer.cacheStateFile)
+  File "/usr/local/lib/python2.7/dist-packages/toil/fileStore.py", line 297, in _load
+    with open(fileName, 'r') as fH:
+IOError: [Errno 2] No such file or directory: '/var/lib/toil/toil-feb2500d-7c10-41f0-9b40-2be47a9c86ef/cache-feb2500d-7c10-41f0-9b40-2be47a9c86ef/_cacheState'
+Exiting the worker because of a failed job on host ip-172-31-32-19
+ERROR:toil.worker:Exiting the worker because of a failed job on host ip-172-31-32-19
+WARNING:toil.jobGraph:Due to failure we are reducing the remaining retry count of job 'gatk_haplotype_caller' 3ed70981-b1ec-4f2e-b64b-fbb8362b60f6 with ID 3ed70981-b1ec-4f2e-b64b-fbb8362b60f6 to 0
+<=========
+
