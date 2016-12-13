@@ -1,0 +1,131 @@
+##############################################################################################################
+# GATK Germline Pipeline configuration file
+# Variant databases can be obtained through the GATK resource bundle:
+# https://software.broadinstitute.org/gatk/guide/article?id=1213
+# http://gatkforums.broadinstitute.org/gatk/discussion/1259/what-vqsr-training-sets-arguments-should-i-use-for-my-specific-project
+##############################################################################################################
+# This configuration file is formatted in YAML. Simply write the value (at least one space) after the colon.
+# Edit the values in this configuration file and then rerun the pipeline
+# Comments (beginning with #) do not need to be removed. Optional parameters may be left blank.
+##############################################################################################################
+# Required: Number of cores per job
+cores: 30
+
+# Required: Java heap size (human readable bytes format i.e. 10G)
+xmx: 30G
+
+# Required: Approximate input file size (human readable bytes format)
+file-size: 150G
+
+# Required: S3 URL or local path to output directory
+output-dir: s3://cgl-driver-projects/germline-validation-input/output/nov26/tenSamples
+
+# Required: Input BAM file is sorted (Default: False)
+sorted: False
+
+# Required: URL or local path to reference genome FASTA file
+genome-fasta: s3://cgl-pipeline-inputs/germline/b37/hs37d5.fa
+
+# Optional: URL or local path to reference genome index (Default: None)
+genome-fai:
+
+# Optional: URL or local path to reference genome sequence dictionary (Default: None)
+genome-dict:
+
+# Required for VQSR: URL or local path to 1000G SNP resource file (Default: None)
+g1k_snp:
+
+# Required for preprocessing: URL or local path to 1000G INDEL resource file (Default: None)
+g1k_indel: s3://cgl-pipeline-inputs/germline/b37/1000G_phase1.indels.b37.vcf
+
+# Required for VQSR: URL or local path HapMap resource file (Default: None)
+hapmap: s3://cgl-pipeline-inputs/germline/b37/hapmap_3.3.b37.vcf
+
+# Required for VQSR: URL or local path Omni resource file (Default: None)
+omni: s3://cgl-pipeline-inputs/germline/b37/1000G_omni2.5.b37.vcf
+
+# Required for VQSR: URL or local path to Mills resource file (Default: None)
+mills: s3://cgl-pipeline-inputs/germline/b37/Mills_and_1000G_gold_standard.indels.b37.vcf
+
+# Required for VQSR: URL or local path to dbSNP resource file (Default: None)
+dbsnp: s3://cgl-pipeline-inputs/germline/b37/dbsnp_138.b37.vcf
+
+# Required for FASTQ samples: Align FASTQs or Realign BAM file (Default: False)
+run-bwa: True
+
+# Optional. Trim adapters (Default: False)
+trim:
+
+# Required for BWA alignment: URL or local path to BWA index file prefix.amb (Default: None)
+amb: s3://cgl-pipeline-inputs/germline/b37/hs37d5.fa.amb 
+
+# Required for BWA alignment: URL or local path to BWA index file prefix.ann (Default: None)
+ann: s3://cgl-pipeline-inputs/germline/b37/hs37d5.fa.ann
+
+# Required for BWA alignment: URL or local path to BWA index file prefix.bwt (Default: None)
+bwt: s3://cgl-pipeline-inputs/germline/b37/hs37d5.fa.bwt
+
+# Required for BWA alignment: URL or local path to BWA index file prefix.pac (Default: None)
+pac: s3://cgl-pipeline-inputs/germline/b37/hs37d5.fa.pac
+
+# Required for BWA alignment: URL or local path to BWA index file prefix.sa (Default: None)
+sa: s3://cgl-pipeline-inputs/germline/b37/hs37d5.fa.sa
+
+# Required for ALT-aware alignment: URL or local path to alternate contigs (Default: None)
+alt:
+
+# Optional: Run GATK Preprocessing (Default: False)
+preprocess: True
+
+# Optional: Stops after GATK Preprocessing (Default: False)
+preprocess-only: False 
+
+# Required: GATK annotations used to filter SNPs
+snp-filter-annotations:
+ - QualByDepth
+ - FisherStrand
+ - StrandOddsRatio
+ - ReadPosRankSumTest
+ - MappingQualityRankSumTest
+ - RMSMappingQuality
+
+# Required: GATK annotations used to filter INDELS
+indel-filter-annotations:
+ - QualByDepth
+ - FisherStrand
+ - StrandOddsRatio
+ - ReadPosRankSumTest
+ - MappingQualityRankSumTest
+
+# Required for hard filtering: Name of SNP hard filter for VCF header
+snp_filter_name: GERMLINE_SNP_FILTER
+
+# Required for hard filtering: SNP JEXL filter expression
+snp_filter_expression: "QD < 2.0 || FS > 60.0 || MQ < 40.0 || MQRankSum < -12.5 || ReadPosRankSum < -8.0"
+
+# Required for hard filtering: Name of INDEL hard filter for VCF header
+indel_filter_name: GERMLINE_INDEL_FILTER
+
+# Required for hard filtering: INDEL JEXL filter expression
+indel_filter_expression: "QD < 2.0 || FS > 200.0 || ReadPosRankSum < -20.0"
+
+# Optional: Run GATK VQSR (Default: False)
+run-vqsr: False
+
+# Optional: Merges all samples into a single GVCF for genotyping and filtering (Default: False)
+joint-genotype: 
+
+# Optional: Run Oncotator (Default: False)
+run-oncotator:
+
+# Required for Oncotator: URL or local path to Oncotator database (Default: None)
+oncotator-db:
+
+# Optional: Suffix added to output filename (i.e. .toil)
+suffix: .twoSample
+
+# Optional: Path to key file for SSE-C Encryption (Default: None)
+ssec:
+
+# Optional: Allow seq dict incompatibility (Default: False)
+unsafe-mode:
