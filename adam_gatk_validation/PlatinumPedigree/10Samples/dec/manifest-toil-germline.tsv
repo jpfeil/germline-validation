@@ -1,0 +1,24 @@
+#   Edit this manifest to include information pertaining to each sample to be run.
+#   There are 2-4 tab-separated columns: UUID, URL, URL2, and Read Group
+#
+#   UUID        Unique sample identifier
+#   URL         URL (http://, ftp://, file://, s3://) pointing to the input FASTQ or BAM file
+#   URL2        (Optional) URL (http://, ftp://, file://, s3://) pointing to paired FASTQ file
+#   RG-line     (Optional) Read group information for FASTQ sample: @RG	ID:foo	SM:bar
+#
+#   Example below. Lines beginning with # are ignored.
+#
+#   UUID_BAM      file:///path/to/sample.bam
+#                           OR
+#   UUID_FASTQ    file:///path/to/sample.1.fq   file:///path/to/sample.2.fq   @RG\tID:foo\tSM:bar
+#
+#   Place your samples below, one per line.
+ERR174310 s3://cgl-driver-projects/germline-validation-input/output/nov26/tenSamples/ERR174310/ERR174310.preprocessed.twoSample.bam
+ERR174311 s3://cgl-driver-projects/germline-validation-input/output/nov26/tenSamples/ERR174311/ERR174311.preprocessed.twoSample.bam
+ERR174312 s3://cgl-driver-projects/germline-validation-input/output/nov26/tenSamples/ERR174312/ERR174312.preprocessed.twoSample.bam
+ERR174324 s3://cgl-driver-projects/germline-validation-input/output/nov26/tenSamples/ERR174324/ERR174324.preprocessed.twoSample.bam
+ERR174325 s3://cgl-driver-projects/germline-validation-input/output/nov26/tenSamples/ERR174325/ERR174325.preprocessed.twoSample.bam
+ERR174326 s3://cgl-driver-projects/germline-validation-input/output/nov26/tenSamples/ERR174326/ERR174326.preprocessed.twoSample.bam
+ERR174342 s3://cgl-driver-projects/germline-validation-input/output/nov26/tenSamples/ERR174342/ERR174342.preprocessed.twoSample.bam
+ERR174343 s3://cgl-driver-projects/germline-validation-input/output/nov26/tenSamples/ERR174343/ERR174343.preprocessed.twoSample.bam
+ERR174344 s3://cgl-driver-projects/germline-validation-input/output/nov26/tenSamples/ERR174344/ERR174344.preprocessed.twoSample.bam
