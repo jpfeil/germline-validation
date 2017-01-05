@@ -1,0 +1,36 @@
+INFO:toil.leader:No jobs left to run so exiting.
+INFO:toil.leader:Finished the main loop
+INFO:toil.serviceManager:Waiting for service manager thread to finish ...
+INFO:toil.serviceManager:... finished shutting down the service manager. Took 0.0499949455261 seconds
+INFO:toil.statsAndLogging:Waiting for stats and logging collator thread to finish ...
+INFO:toil.statsAndLogging:... finished collating stats and logs. Took 0.264913797379 seconds
+INFO:toil.leader:Finished toil run with 7 failed jobs
+INFO:toil.leader:Failed jobs at end of the run: [JobNode( **{'jobStoreID': 'b014f2ad-7073-420c-a16a-6202b38d3c63', '_config': None, 'predecessorNumber': 0, 'unitName': None, '_preemptable': False, 'jobName': 
+'run_gatk_germline_pipeline', '_disk': 2147483648, '_cores': 1, 'command': None, '_memory': 2147483648} ), JobNode( **{'jobStoreID': '4556e839-1384-40ea-936c-8dd560a80f18', '_config': None, 'predecessorNumber
+': 1, 'unitName': None, '_preemptable': False, 'jobName': 'EncapsulatedJob', '_disk': 2147483648, '_cores': 1, 'command': None, '_memory': 2147483648} ), JobNode( **{'jobStoreID': '79e4379f-573e-45fe-b0a1-184
+783e9fc0b', '_config': None, 'predecessorNumber': 1, 'unitName': None, '_preemptable': False, 'jobName': 'prepare_bam', '_disk': 2147483648, '_cores': 1, 'command': None, '_memory': 2147483648} ), JobNode( **
+{'jobStoreID': '86b9103e-7f91-4d1e-88f4-8202f1abb9c2', '_config': None, 'predecessorNumber': 1, 'unitName': None, '_preemptable': False, 'jobName': 'Job', '_disk': 1048576, '_cores': 0.1, 'command': None, '_m
+emory': 33554432} ), JobNode( **{'jobStoreID': 'bc945488-2896-4ebf-8202-e16df9a73cb6', '_config': None, 'predecessorNumber': 1, 'unitName': None, '_preemptable': False, 'jobName': 'EncapsulatedJob', '_disk': 
+161061273600, '_cores': 1, 'command': '_toil f4cab198-d8de-4550-a8bd-338897ab381b /home/mesosbox/toil-venv/local/lib/python2.7/site-packages toil_lib.urls True', '_memory': 2147483648} ), JobNode( **{'jobStor
+eID': '2c9f5439-46d6-4b94-9103-e018c93fdeff', '_config': None, 'predecessorNumber': 1, 'unitName': None, '_preemptable': False, 'jobName': 'prepare_bam', '_disk': 2147483648, '_cores': 1, 'command': None, '_m
+emory': 2147483648} ), JobNode( **{'jobStoreID': '41a83c3c-e6e4-48b8-87ee-5d649d01071c', '_config': None, 'predecessorNumber': 1, 'unitName': None, '_preemptable': False, 'jobName': 'EncapsulatedJob', '_disk'
+: 161061273600, '_cores': 1, 'command': '_toil 9ceb7e40-c616-4678-b6f2-11849230c4fe /home/mesosbox/toil-venv/local/lib/python2.7/site-packages toil_lib.urls True', '_memory': 2147483648} )]
+I0105 14:12:52.323706  3689 sched.cpp:1771] Asked to stop the driver
+I0105 14:12:52.323850  3698 sched.cpp:1040] Stopping framework '7a55c2c2-69e3-44f0-bdcf-98027d05f10f-0000'
+Traceback (most recent call last):
+  File "/home/mesosbox/toil-venv/bin/toil-germline", line 11, in <module>
+    sys.exit(main())
+  File "/home/mesosbox/toil-venv/local/lib/python2.7/site-packages/toil_scripts/gatk_germline/germline.py", line 895, in main
+    Job.Runner.startToil(root, options)
+  File "/usr/local/lib/python2.7/dist-packages/toil/job.py", line 738, in startToil
+    return toil.start(job)
+  File "/usr/local/lib/python2.7/dist-packages/toil/common.py", line 645, in start
+    return self._runMainLoop(rootJobGraph)
+  File "/usr/local/lib/python2.7/dist-packages/toil/common.py", line 926, in _runMainLoop
+    jobCache=self._jobCache).run()
+  File "/usr/local/lib/python2.7/dist-packages/toil/leader.py", line 192, in run
+    raise FailedJobsException(self.config.jobStore, self.toilState.totalFailedJobs, self.jobStore)
+toil.leader.FailedJobsException: The job store 'aws:us-west-2:jpfeil-germline-val' contains 7 failed jobs: 'run_gatk_germline_pipeline' b014f2ad-7073-420c-a16a-6202b38d3c63, 'EncapsulatedJob' 4556e839-1384-40
+ea-936c-8dd560a80f18, 'prepare_bam' 79e4379f-573e-45fe-b0a1-184783e9fc0b, 'Job' 86b9103e-7f91-4d1e-88f4-8202f1abb9c2, 'EncapsulatedJob' bc945488-2896-4ebf-8202-e16df9a73cb6, 'prepare_bam' 2c9f5439-46d6-4b94-9
+103-e018c93fdeff, 'EncapsulatedJob' 41a83c3c-e6e4-48b8-87ee-5d649d01071c
+
