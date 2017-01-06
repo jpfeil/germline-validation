@@ -216,7 +216,7 @@ def collect_realtime_metrics(params, threshold=0.5, region='us-west-2'):
                         # If there is at least 20 minutes of data points and max is below threshold, flag to be killed.
                         if len(averages) == 4:
                             if max(averages) < threshold:
-                                kill_instance = False
+                                kill_instance = False    # Don't kill an instance
                                 log.info('Flagging {} to be killed. '
                                          'Max CPU {} for last 30 minutes.'.format(instance_id, max(averages)))
                 # Kill instance if idle
